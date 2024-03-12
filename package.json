@@ -25,7 +25,9 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0"
   },
   "private": true
 }

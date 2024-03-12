@@ -3,38 +3,39 @@ import sanityClient from "./sanity";
 let sanityQuery = (query, params) => sanityClient.fetch(query, params);
 
 export const getFeaturedRestaurants = () => {
-  return sanityQuery(`
-    *[_type=='featured']{
+  return sanityQuery(
+    `*[_type=="featured"]{
       ...,
-      dishes[]->{
-        name
-      }
+        restaurant[]->{
+          ...,
+              dishes[]->{
+                name
+              }
+        }
     }
-    `);
+`
+  );
 };
 
 export const getCategories = () => {
   return sanityQuery(`
-    *[_type=='category']
+  *[_type=='category']
   `);
 };
 
-export const getFeaturedRestaurantsById = (id) => {
+export const getFeaturedRestaurantById = (id) => {
   return sanityQuery(
     `
-    *[_type=='featured' && _id == $id]{
+    *[_type=="featured" && _id == $id]{
       ...,
-      restaurants[] -> {
-        ...,
-        dishes[]->{
+        restaurant[]->{
           ...,
-          type->{
-            name,
-          }
+              dishes[]->{
+                name
+              }
         }
-      }
     }[0]
-    `,
+  `,
     { id }
   );
 };
