@@ -1,8 +1,9 @@
 import React from 'react'
+import { Text } from 'react-native'
 
 const DishRow = () => {
   return (
-    <div>DishRow</div>
+    <Text>DishRow</Text>
   )
 }
 

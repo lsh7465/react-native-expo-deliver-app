@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import { Text } from "react-native";
 
 const BasketIcon = () => {
-  return (
-    <div>BasketIcon</div>
-  )
-}
+  return <Text>BasketIcon</Text>;
+};
 
-export default BasketIcon
+export default BasketIcon;

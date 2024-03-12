@@ -1,8 +1,9 @@
 import React from 'react'
+import { Text } from 'react-native'
 
 const CategoryCard = () => {
   return (
-    <div>CategoryCard</div>
+    <Text>CategoryCard</Text>
   )
 }
 

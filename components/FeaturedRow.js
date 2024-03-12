@@ -1,8 +1,9 @@
 import React from 'react'
+import { Text } from 'react-native'
 
 const FeaturedRow = () => {
   return (
-    <div>FeaturedRow</div>
+    <Text>FeaturedRow</Text>
   )
 }
 
