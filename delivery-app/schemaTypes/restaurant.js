@@ -29,7 +29,7 @@ export default defineType({
     }),
     defineField({
       name: 'long',
-      title: 'Longitude of the Restaurant',
+      title: 'Longtitude of the Restaurant',
       type: 'number',
     }),
     defineField({
@@ -39,7 +39,7 @@ export default defineType({
     }),
     defineField({
       name: 'rating',
-      title: 'Enter a Rating from (1-5 Starts)',
+      title: 'Enter a Rating from (1-5 Stars)',
       type: 'number',
       validation: (Rule) => Rule.required().min(1).max(5).error('Rating must be between 1 and 5'),
     }),

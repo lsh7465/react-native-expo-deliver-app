@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { getFeaturedRestaurantById } from "../api";
+import { getFeaturedRestaurantsById } from "../api";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./RestaurantCard";
 
@@ -8,7 +8,7 @@ const FeaturedRow = ({ id, title, description }) => {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    getFeaturedRestaurantById(id)
+    getFeaturedRestaurantsById(id)
       .then((data) => {
         setRestaurants(data?.restaurants);
       })
